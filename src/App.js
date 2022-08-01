@@ -7,25 +7,61 @@ import Userform from "./component/UsersForm.jsx";
 
 
 function App() {
-	const [customers, setCustomers] = useState([
-		
+	const [users, setUsers] = useState([
+		{ name: "John", email: "jon@gmail.com", gen: "4", id: "edjjdjdjdjdkskw" },
+		{ name: "Ama", email: "ama@gmail.com", gen: "48", id: "udiue9893e03-kked" },
+		{ name: "tony", email: "gmail.com", gen: "40", id: "uuueiriedm003wwsw" },
+		{
+			name: "kachi ",
+			email: "kachigmail.com",
+			gen: "90",
+			id: "090390kiocjifiorhi4",
+		},
 	]);
 
-const IncludeUser=(customer)=>{
-      setCustomers([...customers, {name: customer.name, email: customer.email, gen: customer.gen}])
-}
+	const AddNewUser = (user) => {
+		user.id = Math.random().toString(36);
+		setUsers([
+			...users,
+			{ id: user.id, name: user.name, email: user.email, gen: user.gen },
+		]);
+		console.log(user);
+	};
+	
+	const deleteUser = (id) => {
 
+		setUsers(users.filter((user) => user.id !== id));
+
+		//normal if else statement to delete user from users array
+		// setUsers(
+		// 	users.filter((user) => {
+		// 		if (user.id !== id) {
+		// 			return user;
+		// 		}
+		// 	})
+		// );
+	};
+
+
+	
+	const handleEdit = (id, newInfo) => {
+		setUsers(users.map((user) => (user.id === id ? newInfo : user)));
+	};
 	return (
-		<div className="main">
+		<div >
 			<Container>
 				<Row>
 					
 
-					<Col className="col1" md={2}>
-				<Userform newcustomers={IncludeUser}/>
+					<Col md={2}>
+				<Userform newUser={AddNewUser}/>
 					</Col>
-          <Col className="col2" md={10}>
-          <User mycustomers={customers}/>
+          <Col>
+          <User 
+		  userData={users}
+		  deleteUser={deleteUser}
+		  userEdit={handleEdit}
+		  />
 					</Col>
           
 				</Row>

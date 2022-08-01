@@ -13,26 +13,11 @@ body{
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
 
 .main{
-  background-color: black !important;
+ 
   color: white;
   font-weight: bold;
   letter-spacing: 2px;
@@ -45,7 +30,8 @@ flex-wrap:wrap;
 }
 
 .cont{
-margin: 5px;
+margin: 10px;
+width: 35vh;
 background-color: white;
 height: 30vh;
 border: 2px solid lightblue;
@@ -57,10 +43,19 @@ h6{
  position: relative;
  left: 10px;
  top: 2px;
- font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ font-weight: bolder;
+ 
 }
-.col1{
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+.color{
+  color: white;
+  font-weight: bolder;
+}
+
+.colsm{
+  position: relative;
+  top: 3vh;
+  margin: 1vh;
 }
 
 .but{
