@@ -7,17 +7,7 @@ import Userform from "./component/UsersForm.jsx";
 
 
 function App() {
-	const [users, setUsers] = useState([
-		{ name: "John", email: "jon@gmail.com", gen: "4", id: "edjjdjdjdjdkskw" },
-		{ name: "Ama", email: "ama@gmail.com", gen: "48", id: "udiue9893e03-kked" },
-		{ name: "tony", email: "gmail.com", gen: "40", id: "uuueiriedm003wwsw" },
-		{
-			name: "kachi ",
-			email: "kachigmail.com",
-			gen: "90",
-			id: "090390kiocjifiorhi4",
-		},
-	]);
+	const [users, setUsers] = useState([]);
 
 	const AddNewUser = (user) => {
 		user.id = Math.random().toString(36);
@@ -60,7 +50,7 @@ function App() {
           <User 
 		  userData={users}
 		  deleteUser={deleteUser}
-		  userEdit={handleEdit}
+		 editUser={handleEdit}
 		  />
 					</Col>
           

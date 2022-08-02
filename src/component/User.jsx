@@ -16,7 +16,7 @@ function User(props) {
                key={index}
                userInfo={item}
                deleteUser={props.deleteUser}
-               userEdit={props.handleEdit}
+               editUser={props.editUser}
                />
             );
           })}

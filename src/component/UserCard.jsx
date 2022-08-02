@@ -19,7 +19,7 @@ function UserCard(props) {
     <>
     <Modal show={show} onHide={handleClose}>
     <Modal.Header closeButton>
-      <Modal.Title>Edit User</Modal.Title>
+      <Modal.Title>Edit Your Info</Modal.Title>
     </Modal.Header>
     <Modal.Body>
       <EditUserForm editUser={props.editUser}  hide={handleClose} userInfo={props.userInfo} />
@@ -37,7 +37,7 @@ function UserCard(props) {
             <h6>Email:{props.userInfo.email}</h6>
         </Card.Subtitle>
         <Card.Subtitle className="mb-2 text-muted">
-            <h6>Gen:{props.userInfo.gen}</h6>
+            <h6>Password:{props.userInfo.gen}</h6>
         </Card.Subtitle>
         <Button 
          title="Edit" onClick={handleShow} className="but" variant="primary" type="submit">

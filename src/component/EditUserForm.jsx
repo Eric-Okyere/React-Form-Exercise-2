@@ -6,19 +6,14 @@ function EditUserForm(props) {
 	const [name, setName] = useState(props.userInfo.name);
 	const [email, setEmail] = useState(props.userInfo.email);
 	const [gen, setGen] = useState(props.userInfo.gen);
-	
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		props.userEdit(props.userInfo.id, { name, email, gen });
+		props.editUser(props.userInfo.id, { name, email, gen });
 		setName("");
 		setEmail("");
 		setGen("");
 		props.hide();
 	};
-
-
-
-
 
 	return (
 		<Form>
@@ -44,7 +39,7 @@ function EditUserForm(props) {
 			</Form.Group>
 
 			<Form.Group className="mb-3" controlId="formBasicPassword">
-				<Form.Label>Gen</Form.Label>
+				<Form.Label>Password</Form.Label>
 				<Form.Control
 					type="gen"
 					value={gen}

@@ -16,15 +16,15 @@ function Userform(props) {
 		setEmail("");
 		setGen("");
 		
-		// if(name===""){
-		// 	alert("Please fill the name inputs")
-		// }
-		// if(email==="") {
-		// 	alert("Please fill the email inputs")
-		// }
-		// if(gen===""){
-		// 	alert("Please fill gen the inputs")
-		// }
+		if(name===""){
+			alert("Please fill the name inputs")
+		}
+		if(email==="") {
+			alert("Please fill the email inputs")
+		}
+		if(gen===""){
+			alert("Please fill gen the inputs")
+		}
 		
 
 
@@ -53,9 +53,9 @@ function Userform(props) {
 			</Form.Group>
 
 			<Form.Group className="mb-3" controlId="formBasicPassword">
-				<Form.Label className="color">Gen</Form.Label>
+				<Form.Label className="color">Password</Form.Label>
 				<Form.Control
-					type="gen"
+					type="password"
 					value={gen}
 					onChange={(e) => {
 						setGen(e.target.value);
